@@ -18,4 +18,20 @@ for d in data:
     if len(d) < 240:
         new.append(d)
 print('總共有：', len(new) , '筆留言長度小於240')
-print(new[0])
+
+name = []
+account = input('請輸入您要查詢的帳號： ')
+for d in data:
+    if account in d:
+        name.append(d)
+if name == []:
+    print('查不到資料')
+else:
+    print(name)
+
+#進階快寫法
+#name = [d for d in data if 'account' in d]
+#if name == []:
+#    print('查不到資料')
+#else:
+#    print(name)
